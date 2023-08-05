@@ -4,6 +4,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volcano.Api", "src\Volcano.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volcano.Core", "src\Volcano.Core\Volcano.Core.csproj", "{3338C516-0AA1-4289-985E-43B4C9A485A9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{11574D9A-ECCE-479B-BEA6-4B6B76254E3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4C6B2FCD-44A6-48B9-A052-4B326F18AAF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volcano.UnitTest", "test\Volcano.UnitTest\Volcano.UnitTest.csproj", "{ABC05D23-CD7C-4968-BB00-2DAE473C0492}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,14 @@ Global
 		{3338C516-0AA1-4289-985E-43B4C9A485A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3338C516-0AA1-4289-985E-43B4C9A485A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3338C516-0AA1-4289-985E-43B4C9A485A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC05D23-CD7C-4968-BB00-2DAE473C0492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC05D23-CD7C-4968-BB00-2DAE473C0492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC05D23-CD7C-4968-BB00-2DAE473C0492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC05D23-CD7C-4968-BB00-2DAE473C0492}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3338C516-0AA1-4289-985E-43B4C9A485A9} = {11574D9A-ECCE-479B-BEA6-4B6B76254E3B}
+		{B5BE2CC7-5815-4F94-B11C-943BEAE58957} = {11574D9A-ECCE-479B-BEA6-4B6B76254E3B}
+		{ABC05D23-CD7C-4968-BB00-2DAE473C0492} = {4C6B2FCD-44A6-48B9-A052-4B326F18AAF3}
 	EndGlobalSection
 EndGlobal
