@@ -5,8 +5,8 @@ using Microsoft.Identity.Web.Resource;
 namespace Volcano.Api.Controllers;
 
 // [Authorize]
-[ApiController]
-[Route("[controller]")]
+// [ApiController]
+// [Route("[controller]")]
 // [RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
 public class WeatherForecastController : ControllerBase
 {
@@ -25,6 +25,8 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
+        _logger.LogInformation("GetWeatherForecast called ;)");
+        
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
