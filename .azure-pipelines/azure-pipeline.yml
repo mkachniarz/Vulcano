@@ -1,19 +1,22 @@
-trigger: main
-
+trigger:
+  branches:
+    include:
+      - main
+      
 pool:
-    vmImage: ubuntu-latest
+  vmImage: ubuntu-latest
 
 jobs:
-- job: Build
-  steps:
-  - task: UseDotNet@2
-    inputs:
-      version: '8.x'
+  - job: Build
+    steps:
+      - task: UseDotNet@2
+        inputs:
+          version: '8.x'
       
-  - task: DotNetCoreCLI@2
-    inputs:
-      command: 'build'
-
-  - task: DotNetCoreCLI@2
-    inputs:
-      command: 'test'
+      - task: DotNetCoreCLI@2
+        inputs:
+          command: 'build'
+    
+      - task: DotNetCoreCLI@2
+        inputs:
+          command: 'test'
