@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddMediatR(config => config.RegisterServicesFromAssemblyContaining<GetTyreRequest>());
+builder.Services.AddMediatR(config => config.RegisterServicesFromAssemblyContaining<GetTireRequest>());
 
 var app = builder.Build();
 
@@ -16,6 +16,6 @@ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
-app.MapGet("/tires/{id}", (int id, IMediator _mediator) => _mediator.Send(new GetTyreRequest(id)));
+app.MapGet("/tires/{id}", (int id, IMediator _mediator) => _mediator.Send(new GetTireRequest(id)));
 
 app.Run();
