@@ -12,7 +12,8 @@ jobs:
       - task: UseDotNet@2
         inputs:
           version: '8.x'
-      
+          includePreviewVersions: true
+          
       - task: DotNetCoreCLI@2
         inputs:
           command: 'build'
