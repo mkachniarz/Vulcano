@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddMediatR(cfn => cfn.RegisterServicesFromAssemblyContaining<GetTyreRequest>());
+builder.Services.AddMediatR(config => config.RegisterServicesFromAssemblyContaining<GetTyreRequest>());
 
 var app = builder.Build();
 
